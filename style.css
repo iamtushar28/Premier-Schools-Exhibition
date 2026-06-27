@@ -3,3 +3,25 @@
 .enquiry-card-bg{
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(6, 21, 50, 0.2) 100%);
 }
+
+/* Hide horizontal scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none; /* IE & Edge */
+    scrollbar-width: none;    /* Firefox */
+}
+
+/* SVG Mask */
+.gallery-mask {
+    -webkit-mask: url(#gallery-mask);
+    mask: url(#gallery-mask);
+
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}

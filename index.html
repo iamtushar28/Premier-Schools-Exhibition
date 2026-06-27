@@ -24,16 +24,16 @@
 
         <!-- register button -->
         <button
-            class="hidden md:flex h-[60px] w-[205px] border-[2px] border-[#000E38] rounded-[4px] items-center overflow-hidden">
+            class="flex h-[40px] w-fit md:h-[60px] md:w-[205px] border-[2px] border-[#000E38] rounded-[4px] items-center overflow-hidden">
 
             <!-- icon box -->
             <div
-                class="h-[60px] w-[60px] text-[18px] text-white bg-linear-to-r from-[#000E38] to-[#3F186A] rounded-l-[4px] flex justify-center items-center">
+                class="h-[40px] w-[40px] md:h-[60px] md:w-[60px] text-[12px] md:text-[18px] text-white bg-linear-to-r from-[#000E38] to-[#3F186A] rounded-l-[4px] flex justify-center items-center">
                 <i class="bi bi-arrow-up-right"></i>
             </div>
 
             <span
-                class="w-[145px] h-[60px] uppercase text-[14px] font-[700] text-[#030E3B] flex justify-center items-center">
+                class="md:w-[145px] h-[60px] px-2 md:px-0 uppercase text-[12px] md:text-[14px] font-[700] text-[#030E3B] flex justify-center items-center">
                 Register Now
             </span>
 
@@ -462,7 +462,7 @@
         </div>
 
         <!-- schools cards -->
-        <div class="w-full pl-6 flex gap-4 justify-start items-center overflow-hidden">
+        <div class="w-full px-6 flex gap-4 justify-start items-center overflow-x-auto hide-scrollbar">
 
             <!-- cards -->
             <div class="min-w-[300px] md:min-w-[300px] h-[335px] rounded-xl overflow-hidden relative">
@@ -561,7 +561,7 @@
 
         <!-- Left Section -->
         <div class="w-full md:w-1/2 bg-gradient-to-r from-[#DEC1FF] to-[#EAD7FF]">
-            <div class="h-full px-6 md:px-12 pt-16 md:pt-0 flex flex-col justify-center items-start">
+            <div class="h-full px-6 md:px-12 pt-16 md:pt-0 flex flex-col gap-2 justify-center items-start">
 
                 <h6 class="text-[16px] md:text-[20px] font-normal text-[#9B4DF0] italic">
                     Exciting Opportunities for Parents!
@@ -571,7 +571,7 @@
                     Pre-schedule Your
                 </h1>
 
-                <h1 class="text-[28px] md:text-[38px] font-medium text-[#000E38] leading-tight md:-mt-2">
+                <h1 class="text-[28px] md:text-[38px] font-medium text-[#000E38] leading-tight md:-mt-4">
                     School Appointments
                 </h1>
 
@@ -696,6 +696,421 @@
         </div>
 
     </section>
+
+    <!-- exhibition features -->
+    <section
+        class="relative w-full h-[760px] pt-10 bg-linear-to-b from-[#3F186A] to-[#000E38] flex flex-col gap-10 items-center overflow-hidden">
+
+        <!-- title -->
+        <h2 class="text-[24px] md:text-[34px] font-[600] text-center text-white">
+            What Makes This Exhibition <br> a Must-Visit
+        </h2>
+
+        <!-- features card -->
+        <div class="w-full px-6 flex gap-4 justify-start items-center overflow-x-auto hide-scrollbar">
+
+            <!-- card -->
+            <div class="w-[400] h-[360px] p-6 bg-[#DDBFFF] rounded-[20px] flex flex-shrink-0 flex-col gap-5">
+
+                <!-- icon -->
+                <div class="h-[80px] w-[80px]">
+
+                    <img src="./images/icons/man.png" alt="students-in-library" class="h-full w-full object-fit" />
+
+                </div>
+
+                <!-- title -->
+                <h4 class="text-[22px] font-[700] text-[#000E38]">
+                    Interact Directly with School <br> Heads
+                </h4>
+
+                <p class="-mt-4 text-[18px] font-[400] text-[#000E38]">
+                    Get answers straight from the <br> experts
+                </p>
+
+            </div>
+
+            <div class="min-w-[400] h-[360px] p-6 bg-[#DDBFFF] rounded-[20px] flex flex-col flex-shrink-0 gap-5">
+
+                <!-- icon -->
+                <div class="h-[80px] w-[80px]">
+
+                    <img src="./images/icons/notebook.png" alt="students-in-library" class="h-full w-full object-fit" />
+
+                </div>
+
+                <!-- title -->
+                <h4 class="text-[22px] font-[700] text-[#000E38]">
+                    Compare Curriculum & <br> Pedagogy
+                </h4>
+
+                <p class="-mt-4 text-[18px] font-[400] text-[#000E38]">
+                    Understand the differences between <br> CBSE, ICSE, IB, Cambridge, Finnish & <br> more
+                </p>
+
+            </div>
+
+            <div class="w-[400] h-[360px] p-6 bg-[#DDBFFF] rounded-[20px] flex flex-col flex-shrink-0 gap-5">
+
+                <!-- icon -->
+                <div class="h-[80px] w-[80px]">
+
+                    <img src="./images/icons/offer.png" alt="students-in-library" class="h-full w-full object-fit" />
+
+                </div>
+
+                <!-- title -->
+                <h4 class="text-[22px] font-[700] text-[#000E38]">
+                    Get Exclusive Fee Structures & <br> Offers
+                </h4>
+
+                <p class="-mt-4 text-[18px] font-[400] text-[#000E38]">
+                    Access transparent information <br> and avail offers
+                </p>
+
+            </div>
+
+            <div class="w-[400] h-[360px] p-6 bg-[#DDBFFF] rounded-[20px] flex flex-col flex-shrink-0 gap-5">
+
+                <!-- icon -->
+                <div class="h-[80px] w-[80px]">
+
+                    <img src="./images/icons/tutor.png" alt="students-in-library" class="h-full w-full object-fit" />
+
+                </div>
+
+                <!-- title -->
+                <h4 class="text-[22px] font-[700] text-[#000E38]">
+                    Explore Schools Offerings
+                </h4>
+
+                <p class="-mt-4 text-[18px] font-[400] text-[#000E38]">
+                    Preview infrastructure, co- <br>curricular, teaching <br> methodology and culture
+                </p>
+
+            </div>
+
+            <div class="w-[400] h-[360px] p-6 bg-[#DDBFFF] rounded-[20px] flex flex-col flex-shrink-0 gap-5">
+
+                <!-- icon -->
+                <div class="h-[80px] w-[80px]">
+
+                    <img src="./images/icons/counselor.png" alt="students-in-library"
+                        class="h-full w-full object-fit" />
+
+                </div>
+
+                <!-- title -->
+                <h4 class="text-[22px] font-[700] text-[#000E38]">
+                    On-the-Spot Admissions & <br> Counselling
+                </h4>
+
+                <p class="-mt-4 text-[18px] font-[400] text-[#000E38]">
+                    Save time with instant <br> applications and expert <br> guidance
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- controller -->
+        <div class="flex gap-4">
+
+            <!-- back -->
+            <div
+                class="h-[55px] w-[55px] text-white text-[24px] border border-white rounded-full flex justify-center items-center">
+                <i class="bi bi-arrow-left"></i>
+            </div>
+            <!-- next -->
+            <div
+                class="h-[55px] w-[55px] text-[#000E38] text-[24px] bg-white rounded-full flex justify-center items-center">
+                <i class="bi bi-arrow-right"></i>
+            </div>
+
+        </div>
+
+        <!-- Bottom Arc -->
+        <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 180" preserveAspectRatio="none">
+            <path d="M0,0 C360,120 1080,140 1440,0 L1440,180 L0,180 Z" fill="white" />
+        </svg>
+
+    </section>
+
+    <!-- Parents Review -->
+    <section class="w-full h-auto flex flex-col gap-6 justify-center items-center">
+
+        <!-- title -->
+        <div>
+            <h1 class="text-[#000E38] text-[30px] font-[600] text-center">
+                What Makes Parents Choose Us
+            </h1>
+        </div>
+
+        <!-- parents review -->
+        <div class="w-full px-6 flex gap-4 justify-start items-center overflow-x-auto hide-scrollbar">
+            <div class="h-[200px] w-[310px] rounded-[16px] overflow-hidden relative flex-shrink-0">
+
+                <img src="./images/common/gallary2.jpg" alt="students-in-library" class="h-full w-full object-fit" />
+
+                <!-- black overlay section -->
+                <div class="w-[310px] h-[200px] bg-linear-to-b from-black/40 to-black/90 absolute top-0 inset-0 z-20">
+
+                    <!-- play video -->
+                    <button
+                        class="w-fit h-auto text-[24px] font-[700] text-white absolute z-30 bottom-4 left-4 flex gap-2 justify-center items-center">
+                        <i class="bi bi-play-circle-fill"></i>
+                        <span class="text-[12px]">
+                            Play Event Video
+                        </span>
+                    </button>
+
+                </div>
+
+            </div>
+            <div class="h-[200px] w-[310px] rounded-[16px] overflow-hidden relative flex-shrink-0">
+
+                <img src="./images/common/gallary3.jpg" alt="students-in-library" class="h-full w-full object-fit" />
+
+                <!-- black overlay section -->
+                <div class="w-[310px] h-[200px] bg-linear-to-b from-black/40 to-black/90 absolute top-0 inset-0 z-20">
+
+                    <!-- play video -->
+                    <button
+                        class="w-fit h-auto text-[24px] font-[700] text-white absolute z-30 bottom-4 left-4 flex gap-2 justify-center items-center">
+                        <i class="bi bi-play-circle-fill"></i>
+                        <span class="text-[12px]">
+                            Play Event Video
+                        </span>
+                    </button>
+
+                </div>
+
+            </div>
+            <div class="h-[200px] w-[310px] rounded-[16px] overflow-hidden relative flex-shrink-0">
+
+                <img src="./images/common/gallary1.jpg" alt="students-in-library" class="h-full w-full object-fit" />
+
+                <!-- black overlay section -->
+                <div class="w-[310px] h-[200px] bg-linear-to-b from-black/40 to-black/90 absolute top-0 inset-0 z-20">
+
+                    <!-- play video -->
+                    <button
+                        class="w-fit h-auto text-[24px] font-[700] text-white absolute z-30 bottom-4 left-4 flex gap-2 justify-center items-center">
+                        <i class="bi bi-play-circle-fill"></i>
+                        <span class="text-[12px]">
+                            Play Event Video
+                        </span>
+                    </button>
+
+                </div>
+
+            </div>
+            <div class="h-[200px] w-[310px] rounded-[16px] overflow-hidden relative flex-shrink-0">
+
+                <img src="./images/common/gallary2.jpg" alt="students-in-library" class="h-full w-full object-fit" />
+
+                <!-- black overlay section -->
+                <div class="w-[310px] h-[200px] bg-linear-to-b from-black/40 to-black/90 absolute top-0 inset-0 z-20">
+
+                    <!-- play video -->
+                    <button
+                        class="w-fit h-auto text-[24px] font-[700] text-white absolute z-30 bottom-4 left-4 flex gap-2 justify-center items-center">
+                        <i class="bi bi-play-circle-fill"></i>
+                        <span class="text-[12px]">
+                            Play Event Video
+                        </span>
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- controller -->
+        <div class="flex gap-4">
+
+            <!-- back -->
+            <div
+                class="h-[55px] w-[55px] text-[#000E38] text-[24px] border border-[#000E38] rounded-full flex justify-center items-center">
+                <i class="bi bi-arrow-left"></i>
+            </div>
+            <!-- next -->
+            <div
+                class="h-[55px] w-[55px] text-white text-[24px] bg-[#000E38] rounded-full flex justify-center items-center">
+                <i class="bi bi-arrow-right"></i>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- gallery -->
+    <section class="w-full py-12 bg-white">
+
+        <h2 class="text-3xl md:text-[30px] font-semibold text-[#000E38] text-center mb-4">
+            Gallery
+        </h2>
+
+        <div class="relative">
+
+            <!-- Top Arc -->
+            <svg class="absolute top-0 left-0 w-full h-8 md:h-16 z-20 pointer-events-none" viewBox="0 0 1000 100"
+                preserveAspectRatio="none">
+                <path d="M0,0
+                   L0,40
+                   Q500,100 1000,40
+                   L1000,0
+                   Z" fill="white" />
+            </svg>
+
+            <!-- Gallery -->
+            <div class="overflow-x-auto hide-scrollbar">
+                <div class="flex gap-3 px-4 md:px-6 w-max">
+
+                    <img src="./images/common/gallary1.jpg" class="w-[82vw] sm:w-[70vw] md:w-[700px]
+                           h-[220px] md:h-[400px]
+                           object-cover shrink-0">
+
+                    <img src="./images/common/gallary2.jpg" class="w-[82vw] sm:w-[70vw] md:w-[700px]
+                           h-[220px] md:h-[400px]
+                           object-cover shrink-0">
+
+                    <img src="./images/common/gallary3.jpg" class="w-[82vw] sm:w-[70vw] md:w-[700px]
+                           h-[220px] md:h-[400px]
+                           object-cover shrink-0">
+
+                    <img src="./images/common/gallary1.jpg" class="w-[82vw] sm:w-[70vw] md:w-[700px]
+                           h-[220px] md:h-[400px]
+                           object-cover shrink-0">
+
+                </div>
+            </div>
+
+            <!-- Bottom Arc -->
+            <svg class="absolute bottom-0 left-0 w-full h-8 md:h-16 z-20 pointer-events-none" viewBox="0 0 1000 100"
+                preserveAspectRatio="none">
+                <path d="M0,100
+                   L0,60
+                   Q500,0 1000,60
+                   L1000,100
+                   Z" fill="white" />
+            </svg>
+
+        </div>
+
+    </section>
+
+    <!-- footer -->
+    <section
+        class="w-full h-auto md:h-[274px] px-6 py-12 md:py-0 bg-gradient-to-b from-[#3F186A] to-[#000E38] flex flex-col md:flex-row gap-8 md:gap-0 justify-around items-start md:items-center">
+
+        <!-- logo -->
+        <img src="./images/logo/logo.png" alt="Logo" class="h-[80px] w-auto md:h-[124px] md:w-[140px]" />
+
+        <!-- corporate office address -->
+        <div class="flex gap-3 items-start">
+
+            <!-- icon -->
+            <div class="h-[45px] w-[45px] text-[22px] bg-[#DDBFFF] rounded-[10px] flex justify-center items-center">
+                <i class="bi bi-geo-alt"></i>
+            </div>
+
+            <div>
+
+                <h5 class="text-[20px] font-[600] text-white">
+                    Corporate Office:
+                </h5>
+
+                <p class="text-white text-[14px]">
+                    Suite B-5, Ballygunge Park Tower, <br>
+                    67B Ballygunge Circular Road, <br>
+                    Kolkata - 700019
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Ahmedabad Office: address -->
+        <div class="flex gap-3 justify-start">
+
+            <!-- icon -->
+            <div class="h-[45px] w-[45px] text-[22px] bg-[#DDBFFF] rounded-[10px] flex justify-center items-center">
+                <i class="bi bi-geo-alt"></i>
+            </div>
+
+            <div>
+
+                <h5 class="text-[20px] font-[600] text-white">
+                    Ahmedabad Office:
+                </h5>
+
+                <p class="text-white text-[14px]">
+                    12/AA, Swastik Chambers, Near CU <br>
+                    Shah College, Ashram Road, <br>
+                    Ahmedabad - 380009
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Call us on -->
+        <div class="flex gap-3 justify-start">
+
+            <!-- icon -->
+            <div class="h-[45px] w-[45px] text-[22px] bg-[#DDBFFF] rounded-[10px] flex justify-center items-center">
+                <i class="bi bi-telephone"></i>
+            </div>
+
+            <div>
+
+                <h5 class="text-[20px] font-[600] text-white">
+                    Call us on
+                </h5>
+
+                <p class="text-white text-[14px]">
+                    9674805912 <br>
+                    9674585012
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Follow us on -->
+        <div class="flex flex-col gap-2">
+
+            <h5 class="text-[20px] font-[600] text-white">
+                Follow us on
+            </h5>
+
+            <div class="flex gap-4">
+
+                <!-- insta -->
+                <div class="h-[45px] w-[45px] text-[22px] bg-[#DDBFFF] rounded-[10px] flex justify-center items-center">
+                    <i class="bi bi-instagram"></i>
+                </div>
+
+                <!-- facebook -->
+                <div class="h-[45px] w-[45px] text-[22px] bg-[#DDBFFF] rounded-[10px] flex justify-center items-center">
+                    <i class="bi bi-facebook"></i>
+                </div>
+                <!-- youtube -->
+                <div class="h-[45px] w-[45px] text-[22px] bg-[#DDBFFF] rounded-[10px] flex justify-center items-center">
+                    <i class="bi bi-youtube"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- copyright -->
+    <p class="py-4 text-center text-[#000E38]">
+        Copyright © 2025 | All rights reserved. Premier Schools Exhibition
+    </p>
 
 </body>
 
