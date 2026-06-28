@@ -1,4 +1,78 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Fuzzy+Bubbles:wght@400;700&family=Italianno&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* bootstrap icons */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+/* ==========================
+   CSS Reset
+========================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    min-height: 100vh;
+    font-family:Archivo, Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+textarea {
+    resize: vertical;
+}
 
 .enquiry-card-bg{
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(6, 21, 50, 0.2) 100%);
@@ -24,48 +98,6 @@
 
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-}
-
-/* Desktop - hero images auto scroll X-axis */
-.gallery-track {
-    animation: scrollUp 30s linear infinite;
-}
-
-.gallery:hover .gallery-track {
-    animation-play-state: paused;
-}
-
-@keyframes scrollUp {
-    from {
-        transform: translateY(0);
-    }
-
-    to {
-        transform: translateY(-50%);
-    }
-}
-
-/* Mobile - hero images auto scroll Y-axis */
-.mobile-gallery {
-    overflow: hidden;
-}
-
-.mobile-gallery-track {
-    animation: scrollLeft 30s linear infinite;
-}
-
-.mobile-gallery:hover .mobile-gallery-track {
-    animation-play-state: paused;
-}
-
-@keyframes scrollLeft {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-50%);
-    }
 }
 
 /* ==========================
@@ -124,15 +156,18 @@
 ========================== */
 
 .header__logo-link {
-    display: inline-flex;
+    display: flex;
+    align-items: center;
 }
 
 .header__logo {
-    width: auto;
+    display: block;
+
     height: 80px;
+    width: auto;
+
     margin-bottom: -1.5rem;
 }
-
 
 /* ==========================
    Register Button
@@ -199,9 +234,10 @@
         padding: 0 60px;
     }
 
-    .header__logo {
-        width: 201px;
+     .header__logo {
         height: 157px;
+        width: auto;
+
         margin-bottom: -5rem;
     }
 
@@ -222,6 +258,434 @@
 
 }
 
+/* ==========================
+   Desktop Hero Section
+========================== */
+
+.hero--desktop {
+    display: none;
+}
+
+@media (min-width: 768px) {
+
+    .hero--desktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width:100%;
+        height: 720px;
+
+        margin-top: 100px;
+        padding: 0 50px;
+
+        background: linear-gradient(to right, #000E38, #3F186A);
+    }
+
+}
+
+/* ==========================
+   Hero Content
+========================== */
+
+.hero__content {
+    width: 32%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero__header {
+    margin: 0;
+}
+
+.hero__title {
+    color: #FFCC81;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.hero__title-highlight {
+    display: inline-block;
+    font-size: 40px;
+}
+
+.hero__subtitle {
+    color: #FFCC81;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+/* ==========================
+   Schedule Card
+========================== */
+
+.hero__schedule {
+    width: 90%;
+
+    padding: 4px;
+
+    background: #FFCC81;
+
+    border-radius: 27px;
+}
+
+.hero__schedule-inner {
+    height: 331px;
+
+    padding: 0 16px;
+
+    border: 1.5px solid rgba(63, 24, 106, 0.7);
+    border-radius: 27px;
+}
+
+.hero__schedule-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 25%;
+}
+
+.hero__schedule-item:not(:last-child) {
+    border-bottom: 1px solid rgba(63, 24, 106, 0.7);
+}
+
+.hero__venue,
+.hero__date {
+    color: #000E38;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.hero__location,
+.hero__time {
+    color: #000E38;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.hero__divider {
+    width: 2px;
+    height: 40px;
+    background: rgba(63, 24, 106, 0.7);
+}
+
+/* ==========================
+   Hero Visuals
+========================== */
+
+.hero__visuals {
+    width: 38%;
+    height: 720px;
+    padding: 16px 0;
+    overflow: hidden;
+}
+
+/* Keep these animation classes */
+.gallery {
+    width: 38%;
+    height: 720px;
+    padding: 16px 0;
+    overflow: hidden;
+}
+
+.gallery-track {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.hero__image-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero__image {
+    width: 30%;
+    height: 440px;
+
+    border-radius: 999px;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ==========================
+   Hero Enquiry
+========================== */
+
+.hero__enquiry {
+    width: 32%;
+    padding-left: 1.5rem;
+}
+
+.hero__enquiry-card {
+    width: 100%;
+    height: 435px;
+
+    padding: 1rem 1.5rem;
+
+    border-radius: 12px;
+}
+
+.hero__enquiry-title {
+    margin-bottom: 1.5rem;
+
+    color: #ffffff;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.hero__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hero__form-group {
+    width: 100%;
+}
+
+.hero__input,
+.hero__textarea {
+    width: 100%;
+
+    padding: 0 .5rem;
+
+    color: #ffffff;
+
+    background: rgba(255,255,255,.25);
+
+    border: none;
+    border-radius: 8px;
+
+    outline: none;
+}
+
+.hero__input {
+    height: 50px;
+}
+
+.hero__textarea {
+    height: 100px;
+
+    padding-top: .75rem;
+
+    resize: none;
+}
+
+.hero__input::placeholder,
+.hero__textarea::placeholder {
+    color: #ffffff;
+}
+
+.hero__input:focus,
+.hero__textarea:focus {
+    outline: 2px solid #ffffff;
+}
+
+.hero__submit {
+    display: flex;
+    align-items: center;
+
+    width: 205px;
+    height: 60px;
+
+    margin-top: 1rem;
+
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.hero__submit-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 60px;
+    height: 60px;
+
+    color: #2A1459;
+    background: #ffffff;
+}
+
+.hero__submit-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 145px;
+    height: 60px;
+
+    color: #ffffff;
+    font-size: .875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+/* Desktop - hero images auto scroll X-axis */
+.gallery-track {
+    animation: scrollUp 30s linear infinite;
+}
+
+.gallery:hover .gallery-track {
+    animation-play-state: paused;
+}
+
+@keyframes scrollUp {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-50%);
+    }
+}
+
+/* ==========================
+   Mobile Hero
+========================== */
+
+.hero--mobile {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .hero--mobile {
+        display: none;
+    }
+}
+
+.hero__mobile-banner {
+    position: relative;
+
+    width: 100%;
+    margin-top: 60px;
+    padding-bottom: 3rem;
+
+    overflow: hidden;
+
+    background: linear-gradient(to bottom, #3F186A, #000E38);
+}
+
+/* Keep animation classes */
+.mobile-gallery {
+    overflow: hidden;
+    padding: 78px 1rem 0;
+}
+
+.mobile-gallery-track {
+    display: flex;
+    gap: 1rem;
+    width: max-content;
+}
+
+.hero__mobile-image {
+    width: 120px;
+    height: 221px;
+
+    border-radius: 999px;
+
+    object-fit: cover;
+}
+
+.hero__mobile-image--offset {
+    margin-top: -56px;
+}
+
+.hero__mobile-header {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #FFCC81;
+}
+
+.hero__mobile-title {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.hero__mobile-title-highlight {
+    display: inline;
+}
+
+.hero__mobile-subtitle {
+    margin-top: .25rem;
+
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.hero__mobile-curve {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+}
+
+.hero__mobile-schedule {
+    width: 100%;
+    margin-top: .25rem;
+    padding: 0 1rem;
+}
+
+.hero__mobile-schedule-card {
+    width: 100%;
+    height: 90px;
+
+    padding: 4px;
+
+    background: #FFCC81;
+    border-radius: 999px;
+}
+
+.hero__mobile-schedule-inner {
+    width: 100%;
+    height: 100%;
+
+    border: 1px dashed rgba(63, 24, 106, .7);
+    border-radius: 999px;
+}
+
+.hero__mobile-schedule-item {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+/* Mobile - hero images auto scroll Y-axis */
+.mobile-gallery {
+    overflow: hidden;
+}
+
+.mobile-gallery-track {
+    animation: scrollLeft 30s linear infinite;
+}
+
+.mobile-gallery:hover .mobile-gallery-track {
+    animation-play-state: paused;
+}
+
+@keyframes scrollLeft {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
 
 /* ==========================
    Features Section
@@ -1417,9 +1881,16 @@
     background: linear-gradient(to bottom, #3F186A, #000E38);
 }
 
+.site-footer__logo-link {
+    display: inline-flex;
+    align-items: center;
+}
+
 .site-footer__logo {
-    width: auto;
+    display: block;
     height: 80px;
+    width: auto;
+    max-width: 100%;
 }
 
 .site-footer__block,
@@ -1462,6 +1933,7 @@
 .site-footer__link {
     color: inherit;
     text-decoration: none;
+    font-size: medium;
 }
 
 .site-footer__link:hover,
@@ -1511,8 +1983,8 @@
     }
 
     .site-footer__logo {
-        width: 140px;
         height: 124px;
+        width: auto;
     }
 
 }
