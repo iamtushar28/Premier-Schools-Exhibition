@@ -1,0 +1,130 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+.enquiry-card-bg{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(6, 21, 50, 0.2) 100%);
+}
+
+/* Hide horizontal scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none; /* IE & Edge */
+    scrollbar-width: none;    /* Firefox */
+}
+
+/* SVG Mask */
+.gallery-mask {
+    -webkit-mask: url(#gallery-mask);
+    mask: url(#gallery-mask);
+
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+/* Desktop - hero images auto scroll X-axis */
+.gallery-track {
+    animation: scrollUp 30s linear infinite;
+}
+
+.gallery:hover .gallery-track {
+    animation-play-state: paused;
+}
+
+@keyframes scrollUp {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-50%);
+    }
+}
+
+/* Mobile - hero images auto scroll Y-axis */
+.mobile-gallery {
+    overflow: hidden;
+}
+
+.mobile-gallery-track {
+    animation: scrollLeft 30s linear infinite;
+}
+
+.mobile-gallery:hover .mobile-gallery-track {
+    animation-play-state: paused;
+}
+
+@keyframes scrollLeft {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* zig zag animation for schools logos */
+.logo-marquee {
+    overflow: hidden;
+    width: 100%;
+}
+
+.logo-track {
+    display: flex;
+    width: max-content;
+}
+
+.logo-track>* {
+    flex: 0 0 auto;
+}
+
+.logo-left {
+    animation: marqueeLeft 30s linear infinite;
+}
+
+.logo-right {
+    animation: marqueeRight 30s linear infinite;
+}
+
+.logo-marquee:hover .logo-track {
+    animation-play-state: paused;
+}
+
+@keyframes marqueeLeft {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-1 * var(--move)));
+    }
+}
+
+@keyframes marqueeRight {
+    from {
+        transform: translateX(calc(-1 * var(--move)));
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Mobile - pagination dots for school card */
+.dot{
+    width:8px;
+    height:8px;
+    border-radius:9999px;
+    background:#D1D5DB;
+    transition:.3s;
+}
+
+.dot.active{
+    width:24px;
+    background:#001B5E;
+}

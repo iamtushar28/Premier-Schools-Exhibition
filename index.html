@@ -16,26 +16,34 @@
 
     <!-- navbar -->
     <nav
-        class="h-[60px] md:h-[100px] w-full px-2 md:px-[60px] bg-white shadow flex justify-between items-center fixed top-0 inset-0 z-40">
+        class="h-[60px] lg:h-[100px] w-full px-2 lg:px-[60px] bg-white shadow flex justify-between items-center fixed top-0 inset-0 z-40">
 
         <!-- logo -->
         <img src="./images/logo/logo.webp" alt="Logo"
-            class="h-[80px] w-auto md:h-[157px] md:w-[201px] -mb-6 md:-mb-20" />
+            class="h-[80px] w-auto lg:h-[157px] lg:w-[201px] -mb-6 lg:-mb-20" />
 
         <!-- register button -->
         <button
-            class="flex h-[40px] w-fit md:h-[60px] md:w-[205px] border-[2px] border-[#000E38] rounded-[4px] items-center overflow-hidden">
+            class="h-[40px] w-[160px] md:h-[60px] md:w-[205px] border-[2px] border-[#000E38] rounded-[4px] overflow-hidden group cursor-pointer relative">
 
-            <!-- icon box -->
+            <!-- bg overlay -->
             <div
-                class="h-[40px] w-[40px] md:h-[60px] md:w-[60px] text-[12px] md:text-[18px] text-white bg-linear-to-r from-[#000E38] to-[#3F186A] rounded-l-[4px] flex justify-center items-center">
-                <i class="bi bi-arrow-up-right"></i>
-            </div>
+                class="h-[40px] w-[40px] md:h-[60px] md:w-[60px] group-hover:w-[205px] bg-linear-to-r from-[#000E38] to-[#3F186A] transition-all duration-600 flex items-start">
 
-            <span
-                class="md:w-[145px] h-[60px] px-2 md:px-0 uppercase text-[12px] md:text-[14px] font-[700] text-[#030E3B] flex justify-center items-center">
-                Register Now
-            </span>
+                <div class="w-full h-full absolute inset-0 flex">
+                    <!-- icon box -->
+                    <div
+                        class="h-[40px] w-[40px] lg:h-[60px] lg:w-[60px] text-[12px] lg:text-[18px] text-white rounded-l-[4px] flex justify-center items-center">
+                        <i class="bi bi-arrow-up-right"></i>
+                    </div>
+
+                    <span
+                        class="h-[40px] md:h-[60px] w-full uppercase text-[12px] md:text-[14px] font-[700] text-[#030E3B] group-hover:text-white flex justify-center items-center transition-all duration-700">
+                        Register Now
+                    </span>
+                </div>
+
+            </div>
 
         </button>
 
@@ -43,7 +51,7 @@
 
     <!-- desktop landing page -->
     <section
-        class="hidden md:flex w-full h-[720px] mt-[100px] px-[50px] bg-linear-to-r from-[#000E38] to-[#3F186A] justify-between items-center">
+        class="hidden lg:flex w-full h-[720px] mt-[100px] px-[50px] bg-linear-to-r from-[#000E38] to-[#3F186A] justify-between items-center">
 
         <!-- heading  -->
         <div class="w-[32%] h-auto flex flex-col gap-[20px]">
@@ -288,12 +296,12 @@
     </section>
 
     <!-- mobile landing page -->
-    <section class="md:hidden">
+    <section class="lg:hidden">
         <section
-            class="relative h-auto w-full mt-[60px] pb-12 bg-gradient-to-b from-[#3F186A] to-[#000E38] overflow-hidden">
+            class="relative h-auto w-full mt-[60px] pb-18 bg-gradient-to-b from-[#3F186A] to-[#000E38] overflow-hidden">
 
             <!-- visuals -->
-            <div class="mobile-gallery overflow-hidden px-4 pt-[78px]">
+            <div class="mobile-gallery overflow-hidden px-4 pt-[80px]">
 
                 <div class="mobile-gallery-track flex gap-4 w-max">
 
@@ -519,7 +527,7 @@
 
         <!-- schools cards -->
         <div id="schoolSlider"
-            class="w-full px-6 flex gap-4 justify-start md:justify-center items-center overflow-x-auto hide-scrollbar snap-x snap-mandatory">
+            class="w-full px-6 flex gap-4 justify-start lg:justify-center items-center overflow-x-auto hide-scrollbar snap-x snap-mandatory">
 
             <!-- cards -->
             <div class="w-[280px] h-[315px] rounded-xl overflow-hidden relative flex-shrink-0 snap-center">
@@ -682,18 +690,18 @@
 
     <!-- attraction for kids section -->
     <section
-        class="w-full h-auto md:h-[550px] px-6 py-12 bg-linear-to-bl from-sky-100 to-white flex flex-wrap gap-8 justify-around items-center">
+        class="w-full h-auto lg:h-[550px] px-6 py-12 bg-linear-to-bl from-sky-100 to-white flex flex-wrap gap-8 justify-around items-center">
 
         <!-- girls visual -->
         <img src="./images/common/star-girls.webp" alt="girls visual"
-            class="hidden md:block w-[380px] h-[380px] object-fit" />
+            class="hidden lg:block w-[380px] h-[380px] object-fit" />
 
         <!-- kidz awards visual -->
         <img src="./images/common/kidz-awards.webp" alt="kidz-awards visual"
-            class="hidden md:block w-[180px] h-[180px] object-fit" />
+            class="hidden lg:block w-[180px] h-[180px] object-fit" />
 
         <!-- title for mobile screen -->
-        <div class="text-center block md:hidden">
+        <div class="text-center block lg:hidden">
             <h2 class="text-[28px] font-[600] text-[#000E38]">
                 Other Attractions for
             </h2>
@@ -704,12 +712,12 @@
 
         <!-- kidz awards visual -->
         <img src="./images/common/kidz-mobile.webp" alt="kidz-awards visual"
-            class="block md:hidden w-full h-auto object-fit" />
+            class="block lg:hidden w-full h-auto object-fit" />
 
         <!-- title section -->
         <div class="flex flex-col gap-6">
 
-            <div class="hidden md:block">
+            <div class="hidden lg:block">
                 <h2 class="text-[28px] font-[600] text-[#000E38]">
                     Other Attractions for
                 </h2>
@@ -718,15 +726,15 @@
                 </h2>
             </div>
 
-            <div class="flex md:gap-2 justify-between md:justify-normal">
+            <div class="flex gap-2 lg:justify-normal">
 
                 <button
-                    class="md:w-[200px] w-fit h-[45px] md:h-[55px] px-2 text-[14px] md:text-[16px] font-[600] text-white bg-linear-to-r from-[#000E38] to-[#3F186A] rounded-[5px]">
+                    class="lg:w-[200px] w-fit h-[45px] lg:h-[55px] px-2 text-[14px] lg:text-[16px] font-[600] text-white bg-linear-to-r from-[#000E38] to-[#3F186A] rounded-[5px]">
                     Premier Kidz Awards
                 </button>
 
                 <button
-                    class="md:w-[200px] w-fit h-[45px] md:h-[55px] px-2 text-[14px] md:text-[16px] font-[600] text-[#3F186A] border border-[#3F186A] rounded-[5px]">
+                    class="lg:w-[200px] w-fit h-[45px] lg:h-[55px] px-2 text-[14px] lg:text-[16px] font-[600] text-[#3F186A] border border-[#3F186A] rounded-[5px]">
                     The Parent Exchange
                 </button>
 
@@ -736,7 +744,7 @@
                 <h4 class="text-[22px] font-[600]">
                     Premier Kidz Awards
                 </h4>
-                <p class="w-full md:w-[500px] text-[14px] md:text-[18px] font-[400]">
+                <p class="w-full lg:w-[500px] text-[14px] lg:text-[18px] font-[400]">
                     A prestigious platform celebrating young talent and building confidence by giving children the
                     spotlight to shine.
 
@@ -745,10 +753,10 @@
 
             <!-- Button -->
             <button
-                class="h-[55px] md:h-[60px] w-full md:w-[240px] border-2 border-[#000E38] rounded flex items-center overflow-hidden">
+                class="h-[55px] lg:h-[60px] w-full lg:w-[240px] border-2 border-[#000E38] rounded flex items-center overflow-hidden">
 
                 <div
-                    class="w-[55px] md:w-[60px] h-[55px] md:h-[60px] bg-gradient-to-r from-[#000E38] to-[#3F186A] flex justify-center items-center text-white">
+                    class="w-[55px] lg:w-[60px] h-[55px] lg:h-[60px] bg-gradient-to-r from-[#000E38] to-[#3F186A] flex justify-center items-center text-white">
                     <i class="bi bi-arrow-up-right"></i>
                 </div>
 
@@ -1041,7 +1049,7 @@
 
             <!-- Gallery -->
             <div class="overflow-x-auto hide-scrollbar">
-                <div class="flex gap-3 px-4 md:px-6 w-max">
+                <div class="flex gap-2 px-4 md:px-6 w-max">
 
                     <img src="./images/common/gallary1.webp" class="w-[82vw] sm:w-[70vw] md:w-[700px]
                            h-[220px] md:h-[400px]
@@ -1078,7 +1086,7 @@
 
     <!-- footer -->
     <section
-        class="w-full h-auto md:h-[274px] px-6 py-12 md:py-0 bg-gradient-to-b from-[#3F186A] to-[#000E38] flex flex-col md:flex-row gap-8 md:gap-0 justify-around items-start md:items-center">
+        class="w-full h-auto lg:h-[274px] px-6 py-12 lg:py-0 bg-gradient-to-b from-[#3F186A] to-[#000E38] flex flex-col lg:flex-row gap-8 lg:gap-0 justify-around items-start lg:items-center">
 
         <!-- logo -->
         <img src="./images/logo/logo.webp" alt="Logo" class="h-[80px] w-auto md:h-[124px] md:w-[140px]" />
