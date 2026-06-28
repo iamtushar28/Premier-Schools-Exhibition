@@ -68,6 +68,329 @@
     }
 }
 
+/* ==========================
+   Skip Link
+========================== */
+
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 1rem;
+    z-index: 1000;
+    padding: 0.75rem 1rem;
+    background: #000e38;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+
+/* ==========================
+   Header
+========================== */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    z-index: 100;
+}
+
+
+/* ==========================
+   Navigation
+========================== */
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 60px;
+    padding: 0 0.5rem;
+}
+
+
+/* ==========================
+   Logo
+========================== */
+
+.header__logo-link {
+    display: inline-flex;
+}
+
+.header__logo {
+    width: auto;
+    height: 80px;
+    margin-bottom: -1.5rem;
+}
+
+
+/* ==========================
+   Register Button
+========================== */
+
+.header__register-btn {
+    display: inline-flex;
+    align-items: center;
+
+    height: 40px;
+
+    border: 2px solid #000e38;
+    border-radius: 4px;
+
+    text-decoration: none;
+    overflow: hidden;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.header__register-btn:focus-visible {
+    outline: 3px solid #0d6efd;
+    outline-offset: 3px;
+}
+
+.header__register-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    color: #ffffff;
+
+    background: linear-gradient(90deg, #000e38, #3f186a);
+}
+
+.header__register-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 0.75rem;
+
+    color: #030e3b;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* ==========================
+   Desktop
+========================== */
+
+@media (min-width: 992px) {
+
+    .header__nav {
+        height: 100px;
+        padding: 0 60px;
+    }
+
+    .header__logo {
+        width: 201px;
+        height: 157px;
+        margin-bottom: -5rem;
+    }
+
+    .header__register-btn {
+        height: 60px;
+    }
+
+    .header__register-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.125rem;
+    }
+
+    .header__register-text {
+        width: 145px;
+        font-size: 0.875rem;
+    }
+
+}
+
+
+/* ==========================
+   Features Section
+========================== */
+
+.features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    padding: 2.5rem 0 1.5rem;
+}
+
+.features__image-wrapper {
+    display: block;
+    width: 92%;
+}
+
+.features__image {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+/* ==========================
+   Desktop
+========================== */
+
+@media (min-width: 768px) {
+
+    .features {
+        padding: 0;
+    }
+
+    .features__image-wrapper {
+        width: 80%;
+    }
+
+}
+
+/* ==========================
+   Visually Hidden
+========================== */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ==========================
+   Call To Action
+========================== */
+
+.cta {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 55px;
+}
+
+.cta__button,
+.cta__stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+    height: 100%;
+}
+
+.cta__button {
+    background: linear-gradient(90deg, #3f186a, #000e38);
+
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 700;
+
+    transition: opacity 0.3s ease;
+}
+
+.cta__button:hover {
+    opacity: 0.9;
+}
+
+.cta__button:focus-visible {
+    outline: 3px solid #0d6efd;
+    outline-offset: -3px;
+}
+
+.cta__stats {
+    background: linear-gradient(90deg, #c38f59, #fed185);
+}
+
+.cta__stats-text {
+    color: #000e38;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* ==========================
+   Participating Schools
+========================== */
+
+.schools {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 2.5rem 0;
+}
+
+.schools__header {
+    text-align: center;
+}
+
+.schools__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000e38;
+}
+
+.logo-marquee {
+    width: 100%;
+    overflow: hidden;
+}
+
+.logo-track {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.schools__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+
+    min-width: 274px;
+    height: 120px;
+
+    border: 1px solid #e8e7e7;
+}
+
+.schools__logo {
+    width: 120px;
+    height: 86px;
+    object-fit: contain;
+}
+
 /* zig zag animation for schools logos */
 .logo-marquee {
     overflow: hidden;
@@ -115,6 +438,213 @@
     }
 }
 
+/* ==========================
+   Event Video
+========================== */
+
+.event-video {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.event-video__media {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-video__overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: flex-end;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.9)
+    );
+}
+
+.event-video__control {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    margin: 1rem;
+
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.event-video__control-text {
+    font-size: 0.75rem;
+}
+
+.event-video__control:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+}
+
+@media (min-width: 768px) {
+
+    .event-video {
+        height: 600px;
+    }
+
+    .event-video__control {
+        margin: 2.5rem;
+        gap: 1rem;
+        font-size: 2.125rem;
+    }
+
+    .event-video__control-text {
+        font-size: 1.25rem;
+    }
+
+}
+
+/* ==========================
+   Schools Section
+========================== */
+
+.schools-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    width: 100%;
+    padding: 3.75rem 0;
+}
+
+.schools-section__header {
+    width: 70%;
+}
+
+.schools-section__title {
+    text-align: center;
+    color: #000e38;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* ==========================
+   Slider
+========================== */
+
+.schools-section__slider {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+
+    width: 100%;
+    padding: 0 1.5rem;
+
+    overflow-x: auto;
+
+    scroll-snap-type: x mandatory;
+
+    list-style: none;
+    margin: 0;
+}
+
+/* Desktop */
+
+@media (min-width: 768px) {
+
+    .schools-section__slider {
+        justify-content: center;
+    }
+
+}
+
+/* ==========================
+   Card
+========================== */
+
+.school-card {
+    position: relative;
+
+    flex-shrink: 0;
+
+    width: 280px;
+    height: 315px;
+
+    overflow: hidden;
+    border-radius: 0.75rem;
+
+    scroll-snap-align: center;
+}
+
+.school-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.school-card__overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 1rem;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0),
+        rgba(0,0,0,.8)
+    );
+}
+
+.school-card__title {
+    margin-bottom: .5rem;
+
+    color: #ffffff;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.school-card__description {
+    width: 70%;
+
+    color: #ffffff;
+    font-size: .875rem;
+    line-height: 1.5;
+}
+
+/* ==========================
+   Pagination
+========================== */
+
+.schools-pagination {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    margin-top: 1.25rem;
+}
+
+@media (min-width: 768px) {
+
+    .schools-pagination {
+        display: none;
+    }
+
+}
+
 /* Mobile - pagination dots for school card */
 .dot{
     width:8px;
@@ -127,4 +657,862 @@
 .dot.active{
     width:24px;
     background:#001B5E;
+}
+
+/* ==========================
+   Appointment Section
+========================== */
+
+.appointment {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+}
+
+.appointment__content {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+
+    padding: 4rem 1.5rem 1rem 1.5rem;
+
+    background: linear-gradient(to right, #DEC1FF, #EAD7FF);
+}
+
+.appointment__subtitle {
+    color: #9B4DF0;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.appointment__title {
+    color: #000E38;
+    font-size: 1.75rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.appointment__button {
+    display: inline-flex;
+    align-items: center;
+
+    width: 220px;
+    height: 55px;
+
+    margin-top: 1.5rem;
+
+    border: 2px solid #000E38;
+    border-radius: 4px;
+
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.appointment__button-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 55px;
+    height: 100%;
+
+    color: #ffffff;
+    background: linear-gradient(to right, #000E38, #3F186A);
+}
+
+.appointment__button-text {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #030E3B;
+    font-size: .875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.appointment__button:focus-visible {
+    outline: 3px solid #0d6efd;
+    outline-offset: 3px;
+}
+
+/* ==========================
+   Image
+========================== */
+
+.appointment__media {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 260px;
+}
+
+.appointment__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.appointment__overlay {
+    position: absolute;
+    inset: 0 auto auto 0;
+
+    width: 100%;
+    height: 4rem;
+
+    background: linear-gradient(
+        to bottom,
+        #EAD7FF,
+        rgba(234,215,255,.9),
+        transparent
+    );
+}
+
+/* ==========================
+   Desktop
+========================== */
+
+@media (min-width: 768px) {
+
+    .appointment {
+        flex-direction: row;
+        height: 400px;
+    }
+
+    .appointment__content,
+    .appointment__media {
+        width: 50%;
+    }
+
+    .appointment__content {
+        padding: 0 3rem;
+    }
+
+    .appointment__title {
+        font-size: 2.375rem;
+    }
+
+    .appointment__subtitle {
+        font-size: 1.25rem;
+    }
+
+    .appointment__button {
+        width: 240px;
+        height: 60px;
+    }
+
+    .appointment__button-icon {
+        width: 60px;
+    }
+
+    .appointment__media {
+        height: auto;
+    }
+
+    .appointment__overlay {
+        inset: 0 auto 0 0;
+        width: 6rem;
+        height: 100%;
+
+        background: linear-gradient(
+            to right,
+            #EAD7FF,
+            rgba(234,215,255,.9),
+            transparent
+        );
+    }
+
+}
+
+/* ==========================
+   Attractions Section
+========================== */
+
+.attractions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+
+    width: 100%;
+
+    padding: 3rem 1.5rem;
+
+    background: linear-gradient(to bottom left, #e0f2fe, #ffffff);
+}
+
+.attractions__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.attractions__title {
+    color: #000e38;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.attractions__tabs {
+    display: flex;
+    gap: .5rem;
+}
+
+.attractions__tab {
+    height: 45px;
+    padding: 0 1rem;
+
+    border: 1px solid #3F186A;
+    border-radius: 5px;
+
+    background: transparent;
+
+    color: #3F186A;
+    font-size: .775rem;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.attractions__tab--active {
+    color: #ffffff;
+    border: none;
+    background: linear-gradient(to right, #000E38, #3F186A);
+}
+
+.attractions__heading {
+    margin-bottom: .75rem;
+
+    font-size: 1.375rem;
+    font-weight: 600;
+}
+
+.attractions__description {
+    max-width: 500px;
+
+    font-size: .875rem;
+    line-height: 1.6;
+}
+
+.attractions__button {
+    display: inline-flex;
+    align-items: center;
+
+    width: 240px;
+    height: 60px;
+
+    border: 2px solid #000E38;
+    border-radius: 4px;
+
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.attractions__button-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 60px;
+    height: 100%;
+
+    color: #ffffff;
+
+    background: linear-gradient(to right, #000E38, #3F186A);
+}
+
+.attractions__button-text {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #030E3B;
+    font-size: .875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.attractions__image {
+    margin: 0;
+}
+
+.attractions__img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.attractions__image--girls,
+.attractions__image--award {
+    display: none;
+}
+
+.attractions__image--mobile {
+    width: 100%;
+}
+
+@media (min-width:768px){
+
+    .attractions{
+        height:550px;
+    }
+
+    .attractions__image--girls{
+        display:block;
+        width:380px;
+    }
+
+    .attractions__image--award{
+        display:block;
+        width:180px;
+    }
+
+    .attractions__image--mobile{
+        display:none;
+    }
+
+    .attractions__tab{
+        width:200px;
+        height:55px;
+        font-size:1rem;
+    }
+
+    .attractions__title{
+        font-size:28px;
+    }
+
+    .attractions__description{
+        font-size:18px;
+    }
+
+}
+
+/* ==========================
+   Exhibition Highlights
+========================== */
+
+.exhibition-highlights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+
+    width: 100%;
+    padding: 2.5rem 0;
+
+    overflow: hidden;
+
+    background: linear-gradient(to bottom, #3F186A, #000E38);
+}
+
+.exhibition-highlights__header {
+    text-align: center;
+}
+
+.exhibition-highlights__title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.exhibition-highlights__slider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    width: 100%;
+    padding: 0 1.5rem;
+
+    overflow-x: auto;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    list-style: none;
+    margin: 0;
+}
+
+/* ==========================
+   Card
+========================== */
+
+.highlight-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    flex-shrink: 0;
+
+    width: 330px;
+    height: 310px;
+
+    padding: 1.5rem;
+
+    border-radius: 20px;
+
+    background: #DDBFFF;
+
+    scroll-snap-align: center;
+}
+
+.highlight-card__icon {
+    width: 60px;
+    height: 60px;
+    margin: 0;
+}
+
+.highlight-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.highlight-card__title {
+    color: #000E38;
+    font-size: 1.375rem;
+    font-weight: 700;
+}
+
+.highlight-card__description {
+    margin-top: -.75rem;
+
+    color: #000E38;
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+/* ==========================
+   Controls
+========================== */
+
+.exhibition-highlights__controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.exhibition-highlights__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 1.5rem;
+}
+
+.exhibition-highlights__button--previous {
+    color: #ffffff;
+    background: transparent;
+    border: 1px solid #ffffff;
+}
+
+.exhibition-highlights__button--next {
+    color: #000E38;
+    background: #ffffff;
+    border: none;
+}
+
+.exhibition-highlights__button:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+}
+
+@media (min-width:768px){
+
+    .exhibition-highlights__title{
+        font-size:2.125rem;
+    }
+
+}
+
+/* ==========================
+   Parents Reviews
+========================== */
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    width: 100%;
+    padding: 2.5rem 0;
+}
+
+.reviews__header {
+    text-align: center;
+}
+
+.reviews__title {
+    color: #000e38;
+    font-size: 1.875rem;
+    font-weight: 600;
+}
+
+.reviews__slider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    width: 100%;
+    padding: 0 1.5rem;
+
+    overflow-x: auto;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    list-style: none;
+    margin: 0;
+}
+
+/* ==========================
+   Card
+========================== */
+
+.review-card {
+    position: relative;
+
+    flex-shrink: 0;
+
+    width: 310px;
+    height: 200px;
+
+    overflow: hidden;
+    border-radius: 16px;
+
+    scroll-snap-align: center;
+}
+
+.review-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.review-card__overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,.4),
+        rgba(0,0,0,.9)
+    );
+}
+
+.review-card__play {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+
+    background: transparent;
+    border: 0;
+
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.review-card__play-text {
+    font-size: .75rem;
+}
+
+.review-card__play:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+}
+
+/* ==========================
+   Controls
+========================== */
+
+.reviews__controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.reviews__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.reviews__button--previous {
+    color: #000e38;
+    background: transparent;
+    border: 1px solid #000e38;
+}
+
+.reviews__button--next {
+    color: #ffffff;
+    background: #000e38;
+    border: none;
+}
+
+.reviews__button:disabled {
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+.reviews__button:focus-visible {
+    outline: 3px solid #0d6efd;
+    outline-offset: 4px;
+}
+
+/* ==========================
+   Event Showcase
+========================== */
+
+.event-showcase {
+    width: 100%;
+    padding: 1rem 0 2.5rem;
+    background: #ffffff;
+}
+
+.event-showcase__header {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.event-showcase__title {
+    color: #000E38;
+    font-size: 1.875rem;
+    font-weight: 600;
+}
+
+.event-showcase__wrapper {
+    position: relative;
+}
+
+.event-showcase__scroll {
+    overflow-x: auto;
+}
+
+.event-showcase__list {
+    display: flex;
+    gap: .75rem;
+
+    width: max-content;
+
+    margin: 0;
+    padding: 0 1rem;
+
+    list-style: none;
+}
+
+.event-showcase__item {
+    flex-shrink: 0;
+}
+
+.event-showcase__image {
+    display: block;
+
+    width: 82vw;
+    height: 220px;
+
+    object-fit: cover;
+}
+
+.event-showcase__curve {
+    position: absolute;
+    left: 0;
+
+    width: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.event-showcase__curve--top {
+    top: 0;
+    height: 2rem;
+}
+
+.event-showcase__curve--bottom {
+    bottom: 0;
+    height: 2rem;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (min-width: 640px) {
+
+    .event-showcase__image {
+        width: 70vw;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .event-showcase__title {
+        font-size: 1.875rem;
+    }
+
+    .event-showcase__list {
+        padding: 0 1.5rem;
+    }
+
+    .event-showcase__image {
+        width: 700px;
+        height: 400px;
+    }
+
+    .event-showcase__curve--top,
+    .event-showcase__curve--bottom {
+        height: 4rem;
+    }
+
+}
+
+/* ==========================
+   Footer
+========================== */
+
+.site-footer {
+    width: 100%;
+}
+
+.site-footer__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+
+    padding: 3rem 1.5rem;
+
+    background: linear-gradient(to bottom, #3F186A, #000E38);
+}
+
+.site-footer__logo {
+    width: auto;
+    height: 80px;
+}
+
+.site-footer__block,
+.site-footer__social {
+    display: flex;
+    gap: .75rem;
+}
+
+.site-footer__icon,
+.site-footer__social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 45px;
+    height: 45px;
+
+    background: #DDBFFF;
+    border-radius: 10px;
+
+    color: #000E38;
+    font-size: 1.375rem;
+}
+
+.site-footer__heading {
+    margin-bottom: .5rem;
+
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.site-footer__text {
+    color: #ffffff;
+    font-size: .875rem;
+    line-height: 1.6;
+    font-style: normal;
+}
+
+.site-footer__link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.site-footer__link:hover,
+.site-footer__social-link:hover {
+    opacity: .8;
+}
+
+.site-footer__link:focus-visible,
+.site-footer__social-link:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
+
+.site-footer__social {
+    flex-direction: column;
+}
+
+.site-footer__social-list {
+    display: flex;
+    gap: 1rem;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.site-footer__copyright {
+    padding: 1rem;
+    text-align: center;
+}
+
+.site-footer__copyright p {
+    color: #000E38;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+
+    .site-footer__container {
+        flex-direction: row;
+        align-items: center;
+
+        min-height: 274px;
+
+        padding: 0 1.5rem;
+    }
+
+    .site-footer__logo {
+        width: 140px;
+        height: 124px;
+    }
+
 }
