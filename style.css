@@ -575,18 +575,6 @@ textarea {
     background: linear-gradient(to bottom, #3F186A, #000E38);
 }
 
-/* Keep animation classes */
-.mobile-gallery {
-    overflow: hidden;
-    padding: 80px 1rem 0;
-}
-
-.mobile-gallery-track {
-    display: flex;
-    gap: 1rem;
-    width: max-content;
-}
-
 .hero__mobile-image {
     width: 120px;
     height: 221px;
@@ -663,13 +651,19 @@ textarea {
     height: 100%;
 }
 
-/* Mobile - hero images auto scroll Y-axis */
+/* Mobile - hero images auto scroll */
 .mobile-gallery {
     overflow: hidden;
+    width: 100%;
+    padding: 80px 1rem 0;
 }
 
 .mobile-gallery-track {
+    display: flex;
+    gap: 1rem;
+    width: max-content;
     animation: scrollLeft 30s linear infinite;
+    will-change: transform;
 }
 
 .mobile-gallery:hover .mobile-gallery-track {

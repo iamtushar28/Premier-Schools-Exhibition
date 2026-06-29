@@ -1,10 +1,16 @@
-/* Desktop - hero images auto scroll X-axis */
+/* Desktop - hero images auto scroll y-axis */
 const track = document.querySelector(".gallery-track");
 track.innerHTML += track.innerHTML;
 
-/* Mobile - hero images auto scroll Y-axis */
-document.querySelectorAll(".mobile-gallery-track").forEach((track) => {
-  track.innerHTML += track.innerHTML;
+/* Mobile - hero images auto scroll x-axis */
+window.addEventListener("load", () => {
+  const track = document.querySelector(".mobile-gallery-track");
+
+  // Prevent duplicating twice
+  if (!track.dataset.cloned) {
+    track.innerHTML += track.innerHTML;
+    track.dataset.cloned = "true";
+  }
 });
 
 /* zig zag animation for schools logos */
